@@ -46,24 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrepairAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PrepairAdmin.Designer.cs">
-      <DependentUpon>PrepairAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InforManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InforManage.Designer.cs">
-      <DependentUpon>InforManage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage.Designer.cs">
-      <DependentUpon>Manage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +54,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="InforManage.resx">
-      <DependentUpon>InforManage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage.resx">
-      <DependentUpon>Manage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrepairAdmin.resx">
-      <DependentUpon>PrepairAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

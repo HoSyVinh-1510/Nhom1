@@ -45,10 +45,12 @@ namespace SVinhKVinh
 
         private void buttonLongIn_Click_1(object sender, EventArgs e)
         {
-            Manage m = new Manage();
-            this.Hide();
-            m.ShowDialog();
-            this.Show();
+   
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
