@@ -19,7 +19,7 @@ namespace SVinhKVinh
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            Console.WriteLine("Hello World");   
+            Console.WriteLine("Hồ Sỹ Vinh test");
         }
     }
 }
