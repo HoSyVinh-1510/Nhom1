@@ -37,6 +37,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "ManHinChinh";
             this.Text = "Home";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHinChinh_FormClosed);
+            this.Move += new System.EventHandler(this.ManHinChinh_Move);
             this.ResumeLayout(false);
 
         }

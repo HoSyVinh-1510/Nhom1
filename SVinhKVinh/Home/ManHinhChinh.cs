@@ -16,5 +16,17 @@ namespace SVinhKVinh.Home
         {
             InitializeComponent();
         }
+
+        private void ManHinChinh_Move(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManHinChinh_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

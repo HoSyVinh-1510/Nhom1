@@ -38,10 +38,13 @@ namespace SVinhKVinh
             this.labelUserName = new System.Windows.Forms.Label();
             this.TextBoxMatKhau = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // buttonLongIn
             // 
+            this.buttonLongIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonLongIn.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonLongIn.ForeColor = System.Drawing.Color.Black;
             this.buttonLongIn.Location = new System.Drawing.Point(374, 383);
@@ -49,7 +52,7 @@ namespace SVinhKVinh
             this.buttonLongIn.Size = new System.Drawing.Size(161, 54);
             this.buttonLongIn.TabIndex = 2;
             this.buttonLongIn.Text = "ĐĂNG NHẬP";
-            this.buttonLongIn.UseVisualStyleBackColor = true;
+            this.buttonLongIn.UseVisualStyleBackColor = false;
             this.buttonLongIn.Click += new System.EventHandler(this.buttonLongIn_Click_1);
             this.buttonLongIn.DragEnter += new System.Windows.Forms.DragEventHandler(this.buttonLongIn_DragEnter);
             this.buttonLongIn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonLongIn_MouseClick);
@@ -64,6 +67,7 @@ namespace SVinhKVinh
             // 
             // buttonCancel
             // 
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.buttonCancel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.buttonCancel.ForeColor = System.Drawing.Color.Black;
             this.buttonCancel.Location = new System.Drawing.Point(574, 383);
@@ -71,7 +75,7 @@ namespace SVinhKVinh
             this.buttonCancel.Size = new System.Drawing.Size(161, 54);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "THOÁT ";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // LabelLongIn
@@ -125,6 +129,38 @@ namespace SVinhKVinh
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 5;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.radioButton1.ForeColor = System.Drawing.Color.Blue;
+            this.radioButton1.Location = new System.Drawing.Point(357, 163);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(190, 28);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.Text = "QUẢN TRỊ VIÊN";
+            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.radioButton2.ForeColor = System.Drawing.Color.Blue;
+            this.radioButton2.Location = new System.Drawing.Point(572, 163);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(172, 28);
+            this.radioButton2.TabIndex = 7;
+            this.radioButton2.Text = "NGƯỜI DÙNG";
+            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -133,6 +169,8 @@ namespace SVinhKVinh
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1214, 602);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.TextBoxMatKhau);
             this.Controls.Add(this.buttonCancel);
@@ -165,6 +203,8 @@ namespace SVinhKVinh
         private Button buttonLongIn;
         private TextBox TextBoxMatKhau;
         private MonthCalendar monthCalendar1;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
     }
 }
 

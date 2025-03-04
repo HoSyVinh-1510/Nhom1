@@ -7,8 +7,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SVinhKVinh
 {
@@ -49,15 +51,29 @@ namespace SVinhKVinh
         {
             string ConnectionString = "Server=OHMYGOD\\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510;";
             using (SqlConnection conn = new SqlConnection(ConnectionString))
-            {
-                string query = "SELECT COUNT(*) FROM Admin_Login WHERE TaiKhoan = @user AND MatKhau = @pass";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@user", taikhoan);
-                cmd.Parameters.AddWithValue("@pass", matkhau);
-               
-                conn.Open();
-                int count = (int)cmd.ExecuteScalar();
-                return count >0 ;
+            {   
+                int count = -1;
+                if (radioButton1.Checked)
+                {
+                    string query = "SELECT COUNT(*) FROM Admin_Login WHERE TaiKhoan = @user AND MatKhau = @pass";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@user", taikhoan);
+                    cmd.Parameters.AddWithValue("@pass", matkhau);
+                    conn.Open();
+                    count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+                if (radioButton2.Checked)
+                {
+                    string query = "SELECT COUNT(*) FROM Nguoi_Dung_LogIn WHERE TaiKhoan = @user AND MatKhau = @pass";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@user", taikhoan);
+                    cmd.Parameters.AddWithValue("@pass", matkhau);
+                    conn.Open();
+                    count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+                return count < 0;
             }
         }
 
@@ -66,11 +82,11 @@ namespace SVinhKVinh
             string username = TextBoxTaiKhoan.Text;
             string password = TextBoxMatKhau.Text;
             if (CheckLogin(username, password))
-            {
+            {    
                 MessageBox.Show("Đăng nhập thành công");
-                ManHinChinh x=new ManHinChinh();
-                x.Show();
-                this.Hide();    
+                ManHinChinh x = new ManHinChinh();
+                this.Hide();
+                x.ShowDialog();
             }
             else
             {
@@ -102,6 +118,11 @@ namespace SVinhKVinh
         private void buttonLongIn_DragEnter(object sender, DragEventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
