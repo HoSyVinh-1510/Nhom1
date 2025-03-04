@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SVinhKVinh.Home
 {
-    public partial class Home: Form
+    public partial class ManHinChinh: Form
     {
-        public Home()
+        public ManHinChinh()
         {
             InitializeComponent();
         }
