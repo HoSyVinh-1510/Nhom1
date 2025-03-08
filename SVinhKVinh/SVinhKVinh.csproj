@@ -52,6 +52,18 @@
     <Compile Include="Home\ManHinhChinh.Designer.cs">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\SuaThongTinDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\SuaThongTinDangNhap.Designer.cs">
+      <DependentUpon>SuaThongTinDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\ThongTinAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\ThongTinAdmin.Designer.cs">
+      <DependentUpon>ThongTinAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +72,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Home\ManHinhChinh.aa.resx">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\SuaThongTinDangNhap.resx">
+      <DependentUpon>SuaThongTinDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\ThongTinAdmin.resx">
+      <DependentUpon>ThongTinAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

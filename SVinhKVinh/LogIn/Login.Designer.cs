@@ -226,18 +226,18 @@ namespace SVinhKVinh
         }
 
         #endregion
-        private System.Windows.Forms.TextBox TextBoxTaiKhoan;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label LabelLongIn;
         private System.Windows.Forms.Button buttonCancel;
         private Button buttonLongIn;
-        private TextBox TextBoxMatKhau;
         private MonthCalendar monthCalendar1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        public TextBox TextBoxTaiKhoan;
+        public TextBox TextBoxMatKhau;
+        public RadioButton radioButton1;
+        public RadioButton radioButton2;
     }
 }
 
