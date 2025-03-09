@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="adminstatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="adminstatorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
   <data name="thôngTinĐăngNhậpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 26</value>
   </data>
@@ -136,21 +142,9 @@
   <data name="thoátỨngDụngToolStripMenuItem.Text" xml:space="preserve">
     <value>Thoát ứng dụng</value>
   </data>
-  <data name="adminstatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 24</value>
-  </data>
-  <data name="adminstatorToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tài khoản</value>
-  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="trợGiúpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 24</value>
-  </data>
-  <data name="trợGiúpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Trợ giúp?</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -176,6 +170,12 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="trợGiúpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="trợGiúpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Trợ giúp?</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -194,12 +194,6 @@
   <data name="&gt;&gt;adminstatorToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;trợGiúpToolStripMenuItem.Name" xml:space="preserve">
-    <value>trợGiúpToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;trợGiúpToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;thôngTinĐăngNhậpToolStripMenuItem.Name" xml:space="preserve">
     <value>thôngTinĐăngNhậpToolStripMenuItem</value>
   </data>
@@ -216,6 +210,12 @@
     <value>thoátỨngDụngToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;thoátỨngDụngToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trợGiúpToolStripMenuItem.Name" xml:space="preserve">
+    <value>trợGiúpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;trợGiúpToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

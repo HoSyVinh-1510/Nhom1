@@ -17,34 +17,32 @@ namespace SVinhKVinh.Home
         public ThongTinAdmin()
         {
             InitializeComponent();
-            TextBoxPhuongThuc.Text = "Tài Khoản";
-            TextBoxTaiKhoan1.Text = "admin";
-            TextBoxMatKhau1.Text = "admin";
-
         }
-
+        public ThongTinAdmin(string a, string b,string c)
+        {
+            InitializeComponent();
+            TextBoxTaiKhoan1.Text = b;
+            TextBoxMatKhau1.Text = c;
+            TextBoxPhuongThuc.Text = a;
+        }
         private void TextBoxPhuongThuc_TextChanged(object sender, EventArgs e)
         {
-            return;
+        
         }
 
         private void TextBoxTaiKhoan1_TextChanged(object sender, EventArgs e)
         {
-            return;
+          
         }
 
         private void TextBoxMatKhau1_TextChanged(object sender, EventArgs e)
         {
-            return;
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {   
-
-            this.Close();            
-            ManHinhChinh m= new ManHinhChinh();
-            m.Show();
-            this.Hide();
+            this.Close(); 
         }
     }
 }

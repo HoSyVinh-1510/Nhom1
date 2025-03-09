@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManHinhChinh));
             this.adminstatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaThôngTinĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,20 +48,6 @@
             resources.ApplyResources(this.adminstatorToolStripMenuItem, "adminstatorToolStripMenuItem");
             this.adminstatorToolStripMenuItem.Tag = "Lựa chọn thông tin về tài khoản đăng nhập";
             this.adminstatorToolStripMenuItem.Click += new System.EventHandler(this.adminstatorToolStripMenuItem_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adminstatorToolStripMenuItem,
-            this.trợGiúpToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Name = "menuStrip1";
-            // 
-            // trợGiúpToolStripMenuItem
-            // 
-            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            resources.ApplyResources(this.trợGiúpToolStripMenuItem, "trợGiúpToolStripMenuItem");
             // 
             // thôngTinĐăngNhậpToolStripMenuItem
             // 
@@ -81,6 +67,20 @@
             resources.ApplyResources(this.thoátỨngDụngToolStripMenuItem, "thoátỨngDụngToolStripMenuItem");
             this.thoátỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.thoátỨngDụngToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adminstatorToolStripMenuItem,
+            this.trợGiúpToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // trợGiúpToolStripMenuItem
+            // 
+            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            resources.ApplyResources(this.trợGiúpToolStripMenuItem, "trợGiúpToolStripMenuItem");
+            // 
             // ManHinhChinh
             // 
             resources.ApplyResources(this, "$this");
@@ -89,8 +89,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ManHinhChinh";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHinChinh_FormClosed);
-            this.Load += new System.EventHandler(this.ManHinhChinh_Load);
-            this.Move += new System.EventHandler(this.ManHinChinh_Move);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

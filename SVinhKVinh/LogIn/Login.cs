@@ -17,7 +17,6 @@ namespace SVinhKVinh
 {
     public partial class Login : Form
     {
-
         public Login()
         {
             InitializeComponent();
@@ -83,14 +82,23 @@ namespace SVinhKVinh
         {
             string username = TextBoxTaiKhoan.Text;
             string password = TextBoxMatKhau.Text;
-           
+            string method;
+
+            if (radioButton1.Checked)
+            {
+                method = radioButton1.Text;
+            }
+            else
+            {
+                method = radioButton2.Text;
+            }
             if (CheckLogin(username, password))
-            {    
+            {
+
                 MessageBox.Show("Đăng nhập thành công");    
-                
-                ManHinhChinh x = new ManHinhChinh();
                 this.Hide();
-                x.ShowDialog();
+                ManHinhChinh m=new ManHinhChinh(method,username,password);
+                m.ShowDialog();
                 this.Show();
             }
             else

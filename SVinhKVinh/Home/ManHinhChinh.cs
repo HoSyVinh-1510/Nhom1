@@ -14,45 +14,41 @@ namespace SVinhKVinh.Home
 {
     public partial class ManHinhChinh: Form
     {
+        public string StrTaiKhoan;
+        public string StrMatKhau;
+        public string StrPhuongThuc;
         public ManHinhChinh()
         {
             InitializeComponent();
         }
-
-
-        private void ManHinChinh_Move(object sender, EventArgs e)
+        public ManHinhChinh(string a,string b, string c)
         {
-
+            InitializeComponent();
+            StrPhuongThuc = a;
+            StrTaiKhoan = b;
+            StrMatKhau = c;
         }
 
         private void ManHinChinh_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
         }
-
-        private void ManHinhChinh_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void adminstatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
         
         private void thôngTinĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ThongTinAdmin thong_Tin_Admin = new ThongTinAdmin();           
+        {   
             this.Hide();
-            thong_Tin_Admin.ShowDialog();         
+            ThongTinAdmin t=new ThongTinAdmin(StrPhuongThuc,StrTaiKhoan,StrMatKhau);
+            t.ShowDialog();
             this.Show();
         }
 
         private void thoátỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login l = new Login();
-            l.Show();
         }
 
         private void sửaThôngTinĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
