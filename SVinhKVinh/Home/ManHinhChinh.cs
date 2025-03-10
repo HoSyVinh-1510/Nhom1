@@ -20,13 +20,15 @@ namespace SVinhKVinh.Home
         public ManHinhChinh()
         {
             InitializeComponent();
+
         }
-        public ManHinhChinh(string a,string b, string c)
+        public ManHinhChinh(string a, string b, string c)
         {
             InitializeComponent();
             StrPhuongThuc = a;
             StrTaiKhoan = b;
             StrMatKhau = c;
+            User.Text = $"Xin chào,  {b}";
         }
 
         private void ManHinChinh_FormClosed(object sender, FormClosedEventArgs e)
@@ -56,6 +58,11 @@ namespace SVinhKVinh.Home
             this.Hide();
             s.ShowDialog();
             this.Show();
+        }
+
+        private void User_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

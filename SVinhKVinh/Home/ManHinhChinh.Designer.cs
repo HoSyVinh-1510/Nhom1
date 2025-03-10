@@ -35,7 +35,10 @@
             this.thoátỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.User = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // adminstatorToolStripMenuItem
@@ -81,16 +84,32 @@
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
             resources.ApplyResources(this.trợGiúpToolStripMenuItem, "trợGiúpToolStripMenuItem");
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SVinhKVinh.Properties.Resources.user;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // User
+            // 
+            resources.ApplyResources(this.User, "User");
+            this.User.Name = "User";
+            this.User.Click += new System.EventHandler(this.User_Click);
+            // 
             // ManHinhChinh
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.User);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ManHinhChinh";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHinChinh_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +123,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinĐăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaThôngTinĐăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátỨngDụngToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label User;
     }
 }

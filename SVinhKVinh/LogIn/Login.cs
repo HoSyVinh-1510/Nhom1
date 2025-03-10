@@ -55,8 +55,7 @@ namespace SVinhKVinh
                 int count=0;
                 if (radioButton1.Checked)
                 {
-                    string query = 
-                "SELECT COUNT(*) FROM Admin_Login WHERE TaiKhoan COLLATE SQL_Latin1_General_CP1_CS_AS = @user AND MatKhau COLLATE SQL_Latin1_General_CP1_CS_AS  = @pass";
+                    string query ="SELECT COUNT(*) FROM Admin_Login WHERE TaiKhoan COLLATE SQL_Latin1_General_CP1_CS_AS = @user AND MatKhau COLLATE SQL_Latin1_General_CP1_CS_AS  = @pass";
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.Add(new SqlParameter("@user", SqlDbType.NVarChar,50) { Value = taikhoan });

@@ -124,6 +124,7 @@
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.Size = new System.Drawing.Size(423, 39);
             this.textBoxPass.TabIndex = 15;
+            this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // textBoxPass1
             // 
@@ -132,6 +133,7 @@
             this.textBoxPass1.Name = "textBoxPass1";
             this.textBoxPass1.Size = new System.Drawing.Size(423, 39);
             this.textBoxPass1.TabIndex = 16;
+            this.textBoxPass1.UseSystemPasswordChar = true;
             // 
             // label3
             // 
