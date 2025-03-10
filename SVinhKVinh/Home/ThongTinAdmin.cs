@@ -26,13 +26,11 @@ namespace SVinhKVinh.Home
             TextBoxPhuongThuc.Text = a;
         }
         private void TextBoxPhuongThuc_TextChanged(object sender, EventArgs e)
-        {
-        
+        {       
         }
 
         private void TextBoxTaiKhoan1_TextChanged(object sender, EventArgs e)
-        {
-          
+        {         
         }
 
         private void TextBoxMatKhau1_TextChanged(object sender, EventArgs e)

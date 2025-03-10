@@ -31,7 +31,6 @@ namespace SVinhKVinh.Home
 
         private void ManHinChinh_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
         }
         private void adminstatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -53,7 +52,10 @@ namespace SVinhKVinh.Home
 
         private void sửaThôngTinĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SuaThongTinDangNhap s= new SuaThongTinDangNhap(StrPhuongThuc, StrTaiKhoan, StrMatKhau); 
+            this.Hide();
+            s.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -17,9 +17,31 @@ namespace SVinhKVinh.Home
             InitializeComponent();
         }
 
-        private void SuaThongTinDangNhap_Load(object sender, EventArgs e)
+        public SuaThongTinDangNhap(string a,string b, string c)
+        {
+            InitializeComponent();
+            TextBoxPhuongThuc.Text = a;
+            TextBoxTaiKhoan.Text = b;
+            TextBoxMatKhau.Text = c;
+        }
+        private void TextBoxMatKhau1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

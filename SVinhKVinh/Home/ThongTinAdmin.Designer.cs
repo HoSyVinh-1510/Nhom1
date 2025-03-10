@@ -84,12 +84,11 @@
             // TextBoxMatKhau1
             // 
             this.TextBoxMatKhau1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.TextBoxMatKhau1.Location = new System.Drawing.Point(228, 293);
+            this.TextBoxMatKhau1.Location = new System.Drawing.Point(228, 299);
             this.TextBoxMatKhau1.Name = "TextBoxMatKhau1";
             this.TextBoxMatKhau1.ReadOnly = true;
             this.TextBoxMatKhau1.Size = new System.Drawing.Size(445, 39);
             this.TextBoxMatKhau1.TabIndex = 3;
-            this.TextBoxMatKhau1.UseSystemPasswordChar = true;
             this.TextBoxMatKhau1.TextChanged += new System.EventHandler(this.TextBoxMatKhau1_TextChanged);
             // 
             // label2
