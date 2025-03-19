@@ -64,5 +64,40 @@ namespace SVinhKVinh.Home
         {
 
         }
+
+        private void ManHinhChinh_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sVinhKVinhDataSet.Thong_Tin_Chu_Ho' table. You can move, or remove it, as needed.
+            this.thong_Tin_Chu_HoTableAdapter.Fill(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho);
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void thongTinChuHoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

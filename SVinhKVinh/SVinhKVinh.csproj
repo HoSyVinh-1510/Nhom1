@@ -72,6 +72,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SVinhKVinhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home\ManHinhChinh.aa.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +111,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SVinhKVinhDataSet.xsc">
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SVinhKVinhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SVinhKVinhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SVinhKVinhDataSet.xss">
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

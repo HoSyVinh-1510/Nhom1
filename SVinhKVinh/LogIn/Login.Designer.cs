@@ -179,7 +179,6 @@ namespace SVinhKVinh
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::SVinhKVinh.Properties.Resources.adminstator;
             this.pictureBox1.Location = new System.Drawing.Point(242, 152);
             this.pictureBox1.Name = "pictureBox1";
@@ -209,6 +208,7 @@ namespace SVinhKVinh
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.LabelLongIn);
             this.ForeColor = System.Drawing.Color.Coral;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
