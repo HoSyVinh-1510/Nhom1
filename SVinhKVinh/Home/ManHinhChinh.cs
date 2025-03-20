@@ -17,7 +17,7 @@ namespace SVinhKVinh.Home
         public string StrTaiKhoan;
         public string StrMatKhau;
         public string StrPhuongThuc;
-        private string SoPhong;
+        private string SoPhong = "Tất cả";
         public ManHinhChinh()
         {
             InitializeComponent();
@@ -77,15 +77,6 @@ namespace SVinhKVinh.Home
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex==-1) return;
@@ -95,11 +86,15 @@ namespace SVinhKVinh.Home
         }
 
         private void button1_Click_1(object sender, EventArgs e)
-        {   
-            
-            SoPhong = comboBox1.SelectedItem.ToString();
+        {
+            if (comboBox1.SelectedItem == null) 
+            {   
+                MessageBox.Show("Bạn cần phải chọn một bộ lọc","Hồ Sỹ Vinh said that:");
+                return; 
+            }
+            SoPhong = comboBox1.SelectedItem.ToString(); 
             MessageBox.Show("Hiển thị dữ liệu của: " + SoPhong);
-            if (SoPhong == "Tất cả")
+            if (SoPhong == "Tất cả" || SoPhong==null)
             {
                 this.thong_Tin_Chu_HoTableAdapter.Fill(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho);
             }
@@ -107,6 +102,12 @@ namespace SVinhKVinh.Home
             {
                 this.thong_Tin_Chu_HoTableAdapter.FillBy(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho, SoPhong);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            comboBox1.SelectedItem = null;
+            this.thong_Tin_Chu_HoTableAdapter.Fill(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho);
         }
     }
 }
