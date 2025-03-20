@@ -81,10 +81,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
