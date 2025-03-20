@@ -17,6 +17,7 @@ namespace SVinhKVinh.Home
         public string StrTaiKhoan;
         public string StrMatKhau;
         public string StrPhuongThuc;
+        private string SoPhong;
         public ManHinhChinh()
         {
             InitializeComponent();
@@ -71,22 +72,7 @@ namespace SVinhKVinh.Home
             this.thong_Tin_Chu_HoTableAdapter.Fill(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho);
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void thongTinChuHoBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -97,7 +83,30 @@ namespace SVinhKVinh.Home
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex==-1) return;
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            int x = e.ColumnIndex;
+            MessageBox.Show(" Dữ liệu ô: " + row.Cells[x].Value.ToString());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {   
+            
+            SoPhong = comboBox1.SelectedItem.ToString();
+            MessageBox.Show("Hiển thị dữ liệu của: " + SoPhong);
+            if (SoPhong == "Tất cả")
+            {
+                this.thong_Tin_Chu_HoTableAdapter.Fill(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho);
+            }
+            else
+            {
+                this.thong_Tin_Chu_HoTableAdapter.FillBy(this.sVinhKVinhDataSet.Thong_Tin_Chu_Ho, SoPhong);
+            }
         }
     }
 }

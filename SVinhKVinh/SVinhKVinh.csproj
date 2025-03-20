@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SVinhKVinhDataSet.cs">
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SVinhKVinhDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
