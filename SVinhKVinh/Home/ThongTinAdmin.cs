@@ -42,5 +42,15 @@ namespace SVinhKVinh.Home
         {   
             this.Close(); 
         }
+
+        private void ThongTinAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

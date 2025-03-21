@@ -70,6 +70,7 @@
             this.labelPassword.Size = new System.Drawing.Size(129, 33);
             this.labelPassword.TabIndex = 4;
             this.labelPassword.Text = "Mật khẩu:";
+            this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // TextBoxTaiKhoan1
             // 
@@ -143,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ThongTinAdmin";
             this.Text = "Thong_Tin_Admin";
+            this.Load += new System.EventHandler(this.ThongTinAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

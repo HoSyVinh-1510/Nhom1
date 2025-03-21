@@ -68,6 +68,7 @@ namespace SVinhKVinh
             this.TextBoxTaiKhoan.Name = "TextBoxTaiKhoan";
             this.TextBoxTaiKhoan.Size = new System.Drawing.Size(445, 39);
             this.TextBoxTaiKhoan.TabIndex = 0;
+            this.TextBoxTaiKhoan.TextChanged += new System.EventHandler(this.TextBoxTaiKhoan_TextChanged);
             // 
             // buttonCancel
             // 
@@ -176,6 +177,7 @@ namespace SVinhKVinh
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -186,6 +188,7 @@ namespace SVinhKVinh
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 
