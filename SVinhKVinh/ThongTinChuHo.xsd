@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="SVinhKVinhDataSet" targetNamespace="http://tempuri.org/SVinhKVinhDataSet.xsd" xmlns:mstns="http://tempuri.org/SVinhKVinhDataSet.xsd" xmlns="http://tempuri.org/SVinhKVinhDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="ThongTinChuHo" targetNamespace="http://tempuri.org/ThongTinChuHo.xsd" xmlns:mstns="http://tempuri.org/ThongTinChuHo.xsd" xmlns="http://tempuri.org/ThongTinChuHo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -48,7 +48,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SVinhKVinhDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SVinhKVinhDataSet" msprop:Generator_DataSetName="SVinhKVinhDataSet">
+  <xs:element name="ThongTinChuHo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ThongTinChuHo" msprop:Generator_DataSetName="ThongTinChuHo">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Thong_Tin_Chu_Ho" msprop:Generator_RowEvHandlerName="Thong_Tin_Chu_HoRowChangeEventHandler" msprop:Generator_RowDeletedName="Thong_Tin_Chu_HoRowDeleted" msprop:Generator_RowDeletingName="Thong_Tin_Chu_HoRowDeleting" msprop:Generator_RowEvArgName="Thong_Tin_Chu_HoRowChangeEvent" msprop:Generator_TablePropName="Thong_Tin_Chu_Ho" msprop:Generator_RowChangedName="Thong_Tin_Chu_HoRowChanged" msprop:Generator_RowChangingName="Thong_Tin_Chu_HoRowChanging" msprop:Generator_TableClassName="Thong_Tin_Chu_HoDataTable" msprop:Generator_RowClassName="Thong_Tin_Chu_HoRow" msprop:Generator_TableVarName="tableThong_Tin_Chu_Ho" msprop:Generator_UserTableName="Thong_Tin_Chu_Ho">

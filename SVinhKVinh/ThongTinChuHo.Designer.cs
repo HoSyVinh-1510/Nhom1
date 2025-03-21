@@ -20,9 +20,9 @@ namespace SVinhKVinh {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SVinhKVinhDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ThongTinChuHo")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SVinhKVinhDataSet : global::System.Data.DataSet {
+    public partial class ThongTinChuHo : global::System.Data.DataSet {
         
         private Thong_Tin_Chu_HoDataTable tableThong_Tin_Chu_Ho;
         
@@ -30,7 +30,7 @@ namespace SVinhKVinh {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SVinhKVinhDataSet() {
+        public ThongTinChuHo() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SVinhKVinh {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected SVinhKVinhDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ThongTinChuHo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace SVinhKVinh {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SVinhKVinhDataSet cln = ((SVinhKVinhDataSet)(base.Clone()));
+            ThongTinChuHo cln = ((ThongTinChuHo)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace SVinhKVinh {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SVinhKVinhDataSet";
+            this.DataSetName = "ThongTinChuHo";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SVinhKVinhDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ThongTinChuHo.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableThong_Tin_Chu_Ho = new Thong_Tin_Chu_HoDataTable();
@@ -225,7 +225,7 @@ namespace SVinhKVinh {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SVinhKVinhDataSet ds = new SVinhKVinhDataSet();
+            ThongTinChuHo ds = new ThongTinChuHo();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -550,7 +550,7 @@ namespace SVinhKVinh {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SVinhKVinhDataSet ds = new SVinhKVinhDataSet();
+                ThongTinChuHo ds = new ThongTinChuHo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -838,7 +838,7 @@ namespace SVinhKVinh {
         }
     }
 }
-namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
+namespace SVinhKVinh.ThongTinChuHoTableAdapters {
     
     
     /// <summary>
@@ -995,25 +995,19 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT SoPhong, HoTen, NgaySinh, GioiTinh, CCCD, IDKhachHang, NgaySuDung FROM dbo" +
                 ".Thong_Tin_Chu_Ho";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT SoPhong, HoTen, NgaySinh, GioiTinh, CCCD, IDKhachHang, NgaySuDung FROM dbo" +
-                ".Thong_Tin_Chu_Ho\r\nWHERE SoPhong=@SoPhong\r\n";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SoPhong", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SoPhong", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SVinhKVinhDataSet.Thong_Tin_Chu_HoDataTable dataTable) {
+        public virtual int Fill(ThongTinChuHo.Thong_Tin_Chu_HoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1026,9 +1020,9 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SVinhKVinhDataSet.Thong_Tin_Chu_HoDataTable GetData() {
+        public virtual ThongTinChuHo.Thong_Tin_Chu_HoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SVinhKVinhDataSet.Thong_Tin_Chu_HoDataTable dataTable = new SVinhKVinhDataSet.Thong_Tin_Chu_HoDataTable();
+            ThongTinChuHo.Thong_Tin_Chu_HoDataTable dataTable = new ThongTinChuHo.Thong_Tin_Chu_HoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1036,33 +1030,14 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(SVinhKVinhDataSet.Thong_Tin_Chu_HoDataTable dataTable, string SoPhong) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((SoPhong == null)) {
-                throw new global::System.ArgumentNullException("SoPhong");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(SoPhong));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SVinhKVinhDataSet.Thong_Tin_Chu_HoDataTable dataTable) {
+        public virtual int Update(ThongTinChuHo.Thong_Tin_Chu_HoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SVinhKVinhDataSet dataSet) {
+        public virtual int Update(ThongTinChuHo dataSet) {
             return this.Adapter.Update(dataSet, "Thong_Tin_Chu_Ho");
         }
         
@@ -1236,7 +1211,7 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(SVinhKVinhDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ThongTinChuHo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._thong_Tin_Chu_HoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Thong_Tin_Chu_Ho.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1255,7 +1230,7 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(SVinhKVinhDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ThongTinChuHo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._thong_Tin_Chu_HoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Thong_Tin_Chu_Ho.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1273,7 +1248,7 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(SVinhKVinhDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ThongTinChuHo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._thong_Tin_Chu_HoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Thong_Tin_Chu_Ho.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1315,7 +1290,7 @@ namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(SVinhKVinhDataSet dataSet) {
+        public virtual int UpdateAll(ThongTinChuHo dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
