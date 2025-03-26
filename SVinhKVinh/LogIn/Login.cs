@@ -49,7 +49,7 @@ namespace SVinhKVinh
 
         private bool CheckLogin(string taikhoan, string matkhau)
         {
-            string ConnectionString = "Server=OHMYGOD\\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510;";
+            string ConnectionString = "Server=OHMYGOD\\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510";
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {   
                 int count=0;
@@ -61,6 +61,7 @@ namespace SVinhKVinh
                     cmd.Parameters.Add(new SqlParameter("@user", SqlDbType.NVarChar,50) { Value = taikhoan });
                     cmd.Parameters.Add(new SqlParameter("@pass", SqlDbType.NVarChar,50) { Value = matkhau });
                     count = (int)cmd.ExecuteScalar();
+                    conn.Close();
                     return count > 0;
 
                 }
@@ -72,6 +73,7 @@ namespace SVinhKVinh
                     cmd.Parameters.Add(new SqlParameter("@user", SqlDbType.NVarChar,50) { Value = taikhoan });
                     cmd.Parameters.Add(new SqlParameter("@pass", SqlDbType.NVarChar,50) { Value = matkhau });
                     count = (int)cmd.ExecuteScalar();
+                    conn.Close();
                     return count > 0;
                 }
             }

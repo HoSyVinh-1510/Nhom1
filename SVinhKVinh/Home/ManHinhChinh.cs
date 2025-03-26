@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
@@ -154,9 +155,70 @@ namespace SVinhKVinh.Home
             }
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.ThemPhong();
+        }
+
+        private void ThemPhong()
+        {
+            try
+            {
+                string SoPhong = textBox1.Text;
+                string HoTen = textBox2.Text;
+                DateTime NgaySinh;
+                if (!DateTime.TryParse(textBox3.Text, out NgaySinh))
+                {
+                    MessageBox.Show("Ngày tháng không hợp lệ. Vui lòng nhập lại. Định dạng ngày tháng dd/mm/yyyy", "Hồ Sỹ Vinh said that:");
+                }
+                string GioiTinh = textBox4.Text;
+                string CCCD = textBox5.Text;
+                string IDKhachHang = textBox6.Text;
+                DateTime NgaySuDung;
+                if (!DateTime.TryParse(textBox7.Text, out NgaySuDung))
+                {
+                    MessageBox.Show("Ngày tháng không hợp lệ. Vui lòng nhập lại. Định dạng ngày tháng dd/mm/yyyy", "Hồ Sỹ Vinh said that:");
+                }
+                // Mở kết nối SQL
+                string strCon = @"Server=OHMYGOD\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510";
+                using (SqlConnection conn = new SqlConnection(strCon))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO Thong_Tin_Chu_Ho VALUES(@SoPhong,@HoTen,@NgaySinh,@GioiTinh,@CCCD,@IDKhachHang,@NgaySuDung)";
+                    using (SqlCommand cmd= new SqlCommand(query,conn) )
+                    {
+                        cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
+                        cmd.Parameters.AddWithValue("@HoTen", HoTen);
+                        cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+                        cmd.Parameters.AddWithValue("@GioiTinh", GioiTinh);
+                        cmd.Parameters.AddWithValue("@CCCD", CCCD);
+                        cmd.Parameters.AddWithValue("@IDKhachHang",IDKhachHang);
+                        cmd.Parameters.AddWithValue("@NgaySuDung", NgaySuDung);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Thêm phòng thành công", "THÔNG BÁO:");
+
+                this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
+            }           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi");
+            }
+            return;
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Định dạng ngày dd//mm/yyyy");
+        }
+
+        private void textBox7_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Định dạng ngày dd//mm/yyyy");
         }
     }
+
+   
 }
