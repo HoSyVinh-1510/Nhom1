@@ -93,33 +93,39 @@ namespace SVinhKVinh.Home
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (comboBox1.SelectedItem == null) 
             {   
                 MessageBox.Show("Bạn cần phải chọn một bộ lọc","Hồ Sỹ Vinh said that:");
                 return; 
             }
-            string SoPhong = "Tất cả"; 
-            SoPhong = comboBox1.SelectedItem.ToString(); 
+            string SoPhong = comboBox1.SelectedItem.ToString(); 
             MessageBox.Show("Hiển thị dữ liệu của: " + SoPhong);
-            if (SoPhong == "Tất cả" || SoPhong==null)
+            thongTinChuHoBindingSource.RemoveFilter();
+            if (SoPhong=="All") SoPhong = null;
+            if (SoPhong == null)
             {
                 this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
-            }
+            }        
             else
             {
-                thongTinChuHoBindingSource.Filter = $"SoPhong='{SoPhong}'";
+                thongTinChuHoBindingSource.Filter = $"SoPhong='{SoPhong}'";             
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             comboBox1.SelectedItem = null;
-         
+            thongTinChuHoBindingSource.RemoveFilter();
+            MessageBox.Show("Xóa tìm kiếm!", "Hồ Sỹ Vinh notificate:");
+            this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {          
             dataGridView2.DataSource = null;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -201,6 +207,9 @@ namespace SVinhKVinh.Home
                 MessageBox.Show("Thêm phòng thành công", "THÔNG BÁO:");
 
                 this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
+
+                comboBox1.Items.Add(textBox1.Text);
+                comboBox4.Items.Add(textBox1.Text);               
             }           
             catch (Exception ex)
             {
@@ -208,6 +217,38 @@ namespace SVinhKVinh.Home
             }
             return;
         }
+
+        private void XoaPhong()
+        {
+            try
+            {
+                string SoPhong = comboBox4.SelectedItem.ToString();
+                if (SoPhong == null) return;
+                string strCon = @"Server=OHMYGOD\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510";
+                using (SqlConnection conn = new SqlConnection(strCon))
+                {
+                    conn.Open();
+                    string query;
+                    if (SoPhong == "All")  query= "DELETE FROM Thong_Tin_Chu_Ho";
+                    else  query = "DELETE FROM Thong_Tin_Chu_Ho WHERE SoPhong=@SoPhong";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Xóa phòng thành công", "Hồ Sỹ Vinh notificate:");
+                this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
+                comboBox1.Items.Remove(textBox1.Text);
+                comboBox4.Items.Remove(textBox1.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi");
+            }
+            return;
+        }
+
 
         private void textBox3_Click(object sender, EventArgs e)
         {
@@ -217,6 +258,26 @@ namespace SVinhKVinh.Home
         private void textBox7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Định dạng ngày dd//mm/yyyy");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.XoaPhong();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
