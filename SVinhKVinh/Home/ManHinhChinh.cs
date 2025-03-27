@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Xpo.DB.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -69,13 +70,11 @@ namespace SVinhKVinh.Home
 
         private void ManHinhChinh_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hoaDon.HoaDonNuoc' table. You can move, or remove it, as needed.
-            this.hoaDonNuocTableAdapter.Fill(this.hoaDon.HoaDonNuoc);
-            // TODO: This line of code loads data into the 'hoaDon.HoaDonDien' table. You can move, or remove it, as needed.
-            this.hoaDonDienTableAdapter.Fill(this.hoaDon.HoaDonDien);
-            // TODO: This line of code loads data into the 'thongTinChuHo.Thong_Tin_Chu_Ho' table. You can move, or remove it, as needed.
-            this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
-            // TODO: This line of code loads data into the 'thongTinChuHo.Thong_Tin_Chu_Ho' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'sVinhKVinhDataSet.HoaDonNuoc' table. You can move, or remove it, as needed.
+            this.hoaDonNuocTableAdapter.Fill(this.sVinhKVinhDataSet.HoaDonNuoc);
+            // TODO: This line of code loads data into the 'sVinhKVinhDataSet.HoaDonDien' table. You can move, or remove it, as needed.
+            this.hoaDonDienTableAdapter.Fill(this.sVinhKVinhDataSet.HoaDonDien);
+
         }
 
         private void thongTinChuHoBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -130,8 +129,8 @@ namespace SVinhKVinh.Home
 
         private void button4_Click(object sender, EventArgs e)
         {
+            dataGridView2.DataSource =null;
 
-          
             if (comboBox2.SelectedItem == null || comboBox3.SelectedItem == null)
             {
                 MessageBox.Show("Bạn cần phải chọn bộ lọc ! Không thể hiện 2 bảng cùng 1 lúc", "Hồ Sỹ Vinh said that:");
@@ -142,23 +141,32 @@ namespace SVinhKVinh.Home
             if (SoPhong == "Tất cả")
             {
                 if (LoaiDichVu == "Hóa đơn điện")
-                {   dataGridView2.DataSource = hoaDonDienBindingSource;
-                    this.hoaDonDienTableAdapter.Fill(this.hoaDon.HoaDonDien); 
+                {  
+                   dataGridView2.DataSource = hoaDonDienBindingSource;
+                    this.hoaDonDienTableAdapter.Fill(this.sVinhKVinhDataSet.HoaDonDien);
                 }
                 if (LoaiDichVu == "Hóa đơn nước")
                 { 
-                    dataGridView2.DataSource = hoaDonNuocBindingSource;
-                    this.hoaDonNuocTableAdapter.Fill(this.hoaDon.HoaDonNuoc);
+                   
+                   dataGridView2.DataSource = hoaDonNuocBindingSource;
+                    this.hoaDonNuocTableAdapter.Fill(this.sVinhKVinhDataSet.HoaDonNuoc);
                 }
             }
             else
             {
-                if (LoaiDichVu == "Hóa đơn điện") { dataGridView2.DataSource = hoaDonDienBindingSource;
-                    this.hoaDonDienBindingSource.Filter = $"SoPhong='{SoPhong}'"; }
-                if (LoaiDichVu == "Hóa đơn nước") {
+                if (LoaiDichVu == "Hóa đơn điện") 
+                {                 
+                    dataGridView2.DataSource = hoaDonDienBindingSource;
+                    this.hoaDonDienBindingSource.Filter = $"SoPhong='{SoPhong}'";
+                }
+                if (LoaiDichVu == "Hóa đơn nước") 
+                {
+                 
                     dataGridView2.DataSource = hoaDonNuocBindingSource;
-                    this.hoaDonNuocBindingSource.Filter = $"SoPhong='{SoPhong}'"; }
+                    this.hoaDonNuocBindingSource.Filter = $"SoPhong='{SoPhong}'";
+                }
             }
+
         }
 
 
@@ -235,8 +243,9 @@ namespace SVinhKVinh.Home
                     {
                         cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
                         cmd.ExecuteNonQuery();
-                    }
+                    }             
                 }
+                
                 MessageBox.Show("Xóa phòng thành công", "Hồ Sỹ Vinh notificate:");
                 this.thong_Tin_Chu_HoTableAdapter.Fill(this.thongTinChuHo.Thong_Tin_Chu_Ho);
                 comboBox1.Items.Remove(textBox1.Text);
@@ -269,15 +278,68 @@ namespace SVinhKVinh.Home
         {
 
         }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
+    
+        private void ThemHoaDon()
         {
+            string SoPhong = comboBox5.SelectedItem.ToString();
+            string LoaiDichVu = comboBox6.SelectedItem.ToString();
+            string Nam = comboBox8.Text;
+            string Thang = comboBox7.Text;
+            string SoSuDung = textBox9.Text;           
+            string trangthai = comboBox9.SelectedItem.ToString();
 
+            double sosudung; double tien;
+            if (double.TryParse(SoSuDung, out sosudung) == false)
+            {
+                MessageBox.Show("Số sử dụng không hợp lệ. Vui lòng nhập lại", "Hồ Sỹ Vinh said that:");
+                return;
+            }
+            if (LoaiDichVu == null)
+            {
+                MessageBox.Show("Bạn phải chọn loại hóa đơn", "Hồ Sỹ Vinh said that:");
+                return;
+            }
+            if (LoaiDichVu == "HÓA ĐƠN ĐIỆN")
+            {
+                
+                if (sosudung <= 50) tien = sosudung * 1.8;
+                else if (sosudung <= 100) tien=(sosudung - 50) * 1.9 + 50 * 1.8;
+                else if (sosudung <= 200) tien = (sosudung - 100) * 2.1 + 50 * 1.8 + 50 * 1.9;
+                else tien = (sosudung - 200) * 2.5 + 50 * 1.8 + 50 * 1.9 + 100 * 2.1;
+            }
+            else 
+            {
+                if (sosudung <= 10) tien = sosudung * 6;
+                else if (sosudung <= 20) tien = (sosudung - 10) * 7 + 10 * 6;
+                else if (sosudung <= 30) tien = (sosudung - 20) * 8.6 + 10 * 6 + 10 * 7;
+                else tien = (sosudung - 30) * 15 + 10 * 6 + 10 * 7 + 10 * 8.6;
+            }
+            textBox10.Text = tien.ToString();
+
+            string strCon = @"Server=OHMYGOD\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510";
+            using (SqlConnection conn = new SqlConnection(strCon))
+            {
+                conn.Open();
+                string query;
+                if (LoaiDichVu == "HÓA ĐƠN ĐIỆN") query = "INSERT INTO HoaDonDien VALUES (@SoPhong,@Nam,@Thang,@SoSuDung,@Tien,@TrangThai) ";
+                else query = "INSERT INTO HoaDonNuoc VALUES (@SoPhong,@Nam,@Thang,@SoSuDung,@Tien,@TrangThai) ";
+                
+                SqlCommand cmd = new SqlCommand(query, conn);
+                
+                cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
+                cmd.Parameters.AddWithValue("@Nam", Nam);
+                cmd.Parameters.AddWithValue("@Thang", Thang);
+                cmd.Parameters.AddWithValue("@SoSuDung", SoSuDung);
+                cmd.Parameters.AddWithValue("@Tien", tien.ToString());
+                cmd.Parameters.AddWithValue("@TrangThai", trangthai);
+                cmd.ExecuteNonQuery();
+            }          
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-
+            this.ThemHoaDon();
+            this.button4_Click(sender, e);
         }
     }
 

@@ -55,11 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HoaDon.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HoaDon.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Home\ManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +81,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SVinhKVinhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinChuHo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,17 +116,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="HoaDon.xsc">
-      <DependentUpon>HoaDon.xsd</DependentUpon>
-    </None>
-    <None Include="HoaDon.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HoaDon.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HoaDon.xss">
-      <DependentUpon>HoaDon.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -137,6 +126,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SVinhKVinhDataSet.xsc">
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SVinhKVinhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SVinhKVinhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SVinhKVinhDataSet.xss">
+      <DependentUpon>SVinhKVinhDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ThongTinChuHo.xsc">
       <DependentUpon>ThongTinChuHo.xsd</DependentUpon>
     </None>

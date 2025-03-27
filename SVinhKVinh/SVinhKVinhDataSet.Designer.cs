@@ -20,9 +20,9 @@ namespace SVinhKVinh {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("HoaDon")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SVinhKVinhDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class HoaDon : global::System.Data.DataSet {
+    public partial class SVinhKVinhDataSet : global::System.Data.DataSet {
         
         private HoaDonDienDataTable tableHoaDonDien;
         
@@ -32,7 +32,7 @@ namespace SVinhKVinh {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public HoaDon() {
+        public SVinhKVinhDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace SVinhKVinh {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected HoaDon(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SVinhKVinhDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -142,7 +142,7 @@ namespace SVinhKVinh {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            HoaDon cln = ((HoaDon)(base.Clone()));
+            SVinhKVinhDataSet cln = ((SVinhKVinhDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -223,9 +223,9 @@ namespace SVinhKVinh {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "HoaDon";
+            this.DataSetName = "SVinhKVinhDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/HoaDon.xsd";
+            this.Namespace = "http://tempuri.org/SVinhKVinhDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableHoaDonDien = new HoaDonDienDataTable();
@@ -257,7 +257,7 @@ namespace SVinhKVinh {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            HoaDon ds = new HoaDon();
+            SVinhKVinhDataSet ds = new SVinhKVinhDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -569,7 +569,7 @@ namespace SVinhKVinh {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HoaDon ds = new HoaDon();
+                SVinhKVinhDataSet ds = new SVinhKVinhDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -890,7 +890,7 @@ namespace SVinhKVinh {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HoaDon ds = new HoaDon();
+                SVinhKVinhDataSet ds = new SVinhKVinhDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1384,7 +1384,7 @@ namespace SVinhKVinh {
         }
     }
 }
-namespace SVinhKVinh.HoaDonTableAdapters {
+namespace SVinhKVinh.SVinhKVinhDataSetTableAdapters {
     
     
     /// <summary>
@@ -1551,7 +1551,7 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HoaDon.HoaDonDienDataTable dataTable) {
+        public virtual int Fill(SVinhKVinhDataSet.HoaDonDienDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1564,9 +1564,9 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HoaDon.HoaDonDienDataTable GetData() {
+        public virtual SVinhKVinhDataSet.HoaDonDienDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HoaDon.HoaDonDienDataTable dataTable = new HoaDon.HoaDonDienDataTable();
+            SVinhKVinhDataSet.HoaDonDienDataTable dataTable = new SVinhKVinhDataSet.HoaDonDienDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1574,14 +1574,14 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HoaDon.HoaDonDienDataTable dataTable) {
+        public virtual int Update(SVinhKVinhDataSet.HoaDonDienDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HoaDon dataSet) {
+        public virtual int Update(SVinhKVinhDataSet dataSet) {
             return this.Adapter.Update(dataSet, "HoaDonDien");
         }
         
@@ -1822,7 +1822,7 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HoaDon.HoaDonNuocDataTable dataTable) {
+        public virtual int Fill(SVinhKVinhDataSet.HoaDonNuocDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1835,9 +1835,9 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HoaDon.HoaDonNuocDataTable GetData() {
+        public virtual SVinhKVinhDataSet.HoaDonNuocDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HoaDon.HoaDonNuocDataTable dataTable = new HoaDon.HoaDonNuocDataTable();
+            SVinhKVinhDataSet.HoaDonNuocDataTable dataTable = new SVinhKVinhDataSet.HoaDonNuocDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1845,14 +1845,14 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HoaDon.HoaDonNuocDataTable dataTable) {
+        public virtual int Update(SVinhKVinhDataSet.HoaDonNuocDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HoaDon dataSet) {
+        public virtual int Update(SVinhKVinhDataSet dataSet) {
             return this.Adapter.Update(dataSet, "HoaDonNuoc");
         }
         
@@ -2043,7 +2043,7 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(HoaDon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SVinhKVinhDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._hoaDonDienTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.HoaDonDien.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2071,7 +2071,7 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(HoaDon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SVinhKVinhDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._hoaDonDienTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.HoaDonDien.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -2097,7 +2097,7 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(HoaDon dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SVinhKVinhDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._hoaDonNuocTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.HoaDonNuoc.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2147,7 +2147,7 @@ namespace SVinhKVinh.HoaDonTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(HoaDon dataSet) {
+        public virtual int UpdateAll(SVinhKVinhDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

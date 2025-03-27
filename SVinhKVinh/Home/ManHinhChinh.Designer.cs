@@ -71,17 +71,33 @@
             this.thongTinChuHoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.thongTinChuHo = new SVinhKVinh.ThongTinChuHo();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDienSuDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thanhTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoaDonDienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoaDon = new SVinhKVinh.HoaDon();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -90,8 +106,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.hoaDonNuocBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hoaDonDienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.adminstatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,22 +114,12 @@
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thong_Tin_Chu_HoTableAdapter = new SVinhKVinh.ThongTinChuHoTableAdapters.Thong_Tin_Chu_HoTableAdapter();
-            this.hoaDonDienTableAdapter = new SVinhKVinh.HoaDonTableAdapters.HoaDonDienTableAdapter();
-            this.hoaDonNuocTableAdapter = new SVinhKVinh.HoaDonTableAdapters.HoaDonNuocTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.sVinhKVinhDataSet = new SVinhKVinh.SVinhKVinhDataSet();
+            this.hoaDonDienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonDienTableAdapter = new SVinhKVinh.SVinhKVinhDataSetTableAdapters.HoaDonDienTableAdapter();
+            this.hoaDonNuocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonNuocTableAdapter = new SVinhKVinh.SVinhKVinhDataSetTableAdapters.HoaDonNuocTableAdapter();
             tabControl1 = new System.Windows.Forms.TabControl();
             tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -127,14 +131,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.thongTinChuHo)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonDienBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDon)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonNuocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonDienBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sVinhKVinhDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonDienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonNuocBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -450,6 +452,18 @@
             // tabPage2
             // 
             resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.label27);
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.comboBox13);
+            this.tabPage2.Controls.Add(this.comboBox12);
+            this.tabPage2.Controls.Add(this.comboBox11);
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.comboBox10);
+            this.tabPage2.Controls.Add(this.label24);
+            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.comboBox9);
             this.tabPage2.Controls.Add(this.comboBox8);
             this.tabPage2.Controls.Add(this.label21);
@@ -469,7 +483,205 @@
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button8.ForeColor = System.Drawing.Color.Blue;
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
+            // 
+            // comboBox13
+            // 
+            resources.ApplyResources(this.comboBox13, "comboBox13");
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            resources.GetString("comboBox13.Items"),
+            resources.GetString("comboBox13.Items1"),
+            resources.GetString("comboBox13.Items2"),
+            resources.GetString("comboBox13.Items3"),
+            resources.GetString("comboBox13.Items4"),
+            resources.GetString("comboBox13.Items5"),
+            resources.GetString("comboBox13.Items6"),
+            resources.GetString("comboBox13.Items7"),
+            resources.GetString("comboBox13.Items8"),
+            resources.GetString("comboBox13.Items9"),
+            resources.GetString("comboBox13.Items10"),
+            resources.GetString("comboBox13.Items11")});
+            this.comboBox13.Name = "comboBox13";
+            // 
+            // comboBox12
+            // 
+            resources.ApplyResources(this.comboBox12, "comboBox12");
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            resources.GetString("comboBox12.Items"),
+            resources.GetString("comboBox12.Items1"),
+            resources.GetString("comboBox12.Items2")});
+            this.comboBox12.Name = "comboBox12";
+            // 
+            // comboBox11
+            // 
+            resources.ApplyResources(this.comboBox11, "comboBox11");
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            resources.GetString("comboBox11.Items"),
+            resources.GetString("comboBox11.Items1")});
+            this.comboBox11.Name = "comboBox11";
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.Name = "label25";
+            // 
+            // comboBox10
+            // 
+            resources.ApplyResources(this.comboBox10, "comboBox10");
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            resources.GetString("comboBox10.Items"),
+            resources.GetString("comboBox10.Items1"),
+            resources.GetString("comboBox10.Items2"),
+            resources.GetString("comboBox10.Items3"),
+            resources.GetString("comboBox10.Items4")});
+            this.comboBox10.Name = "comboBox10";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(this.label24, "label24");
+            this.label24.Name = "label24";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.BackColor = System.Drawing.Color.Yellow;
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Name = "label23";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.ForeColor = System.Drawing.Color.Blue;
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // comboBox9
+            // 
+            resources.ApplyResources(this.comboBox9, "comboBox9");
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            resources.GetString("comboBox9.Items"),
+            resources.GetString("comboBox9.Items1")});
+            this.comboBox9.Name = "comboBox9";
+            // 
+            // comboBox8
+            // 
+            resources.ApplyResources(this.comboBox8, "comboBox8");
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Items.AddRange(new object[] {
+            resources.GetString("comboBox8.Items"),
+            resources.GetString("comboBox8.Items1"),
+            resources.GetString("comboBox8.Items2")});
+            this.comboBox8.Name = "comboBox8";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
+            // 
+            // textBox10
+            // 
+            resources.ApplyResources(this.textBox10, "textBox10");
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            // 
+            // textBox9
+            // 
+            resources.ApplyResources(this.textBox9, "textBox9");
+            this.textBox9.Name = "textBox9";
+            // 
+            // comboBox7
+            // 
+            resources.ApplyResources(this.comboBox7, "comboBox7");
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            resources.GetString("comboBox7.Items"),
+            resources.GetString("comboBox7.Items1"),
+            resources.GetString("comboBox7.Items2"),
+            resources.GetString("comboBox7.Items3"),
+            resources.GetString("comboBox7.Items4"),
+            resources.GetString("comboBox7.Items5"),
+            resources.GetString("comboBox7.Items6"),
+            resources.GetString("comboBox7.Items7"),
+            resources.GetString("comboBox7.Items8"),
+            resources.GetString("comboBox7.Items9"),
+            resources.GetString("comboBox7.Items10"),
+            resources.GetString("comboBox7.Items11")});
+            this.comboBox7.Name = "comboBox7";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
+            // comboBox6
+            // 
+            resources.ApplyResources(this.comboBox6, "comboBox6");
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            resources.GetString("comboBox6.Items"),
+            resources.GetString("comboBox6.Items1")});
+            this.comboBox6.Name = "comboBox6";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // comboBox5
+            // 
+            resources.ApplyResources(this.comboBox5, "comboBox5");
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            resources.GetString("comboBox5.Items"),
+            resources.GetString("comboBox5.Items1"),
+            resources.GetString("comboBox5.Items2"),
+            resources.GetString("comboBox5.Items3"),
+            resources.GetString("comboBox5.Items4")});
+            this.comboBox5.Name = "comboBox5";
             // 
             // label15
             // 
@@ -482,78 +694,12 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.namDataGridViewTextBoxColumn,
-            this.thangDataGridViewTextBoxColumn,
-            this.soDienSuDungDataGridViewTextBoxColumn,
-            this.thanhTienDataGridViewTextBoxColumn,
-            this.trangThaiDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.hoaDonDienBindingSource1;
             resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "SoPhong";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // namDataGridViewTextBoxColumn
-            // 
-            this.namDataGridViewTextBoxColumn.DataPropertyName = "Nam";
-            resources.ApplyResources(this.namDataGridViewTextBoxColumn, "namDataGridViewTextBoxColumn");
-            this.namDataGridViewTextBoxColumn.Name = "namDataGridViewTextBoxColumn";
-            this.namDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thangDataGridViewTextBoxColumn
-            // 
-            this.thangDataGridViewTextBoxColumn.DataPropertyName = "Thang";
-            resources.ApplyResources(this.thangDataGridViewTextBoxColumn, "thangDataGridViewTextBoxColumn");
-            this.thangDataGridViewTextBoxColumn.Name = "thangDataGridViewTextBoxColumn";
-            this.thangDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // soDienSuDungDataGridViewTextBoxColumn
-            // 
-            this.soDienSuDungDataGridViewTextBoxColumn.DataPropertyName = "SoDienSuDung";
-            resources.ApplyResources(this.soDienSuDungDataGridViewTextBoxColumn, "soDienSuDungDataGridViewTextBoxColumn");
-            this.soDienSuDungDataGridViewTextBoxColumn.Name = "soDienSuDungDataGridViewTextBoxColumn";
-            this.soDienSuDungDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // thanhTienDataGridViewTextBoxColumn
-            // 
-            this.thanhTienDataGridViewTextBoxColumn.DataPropertyName = "ThanhTien";
-            resources.ApplyResources(this.thanhTienDataGridViewTextBoxColumn, "thanhTienDataGridViewTextBoxColumn");
-            this.thanhTienDataGridViewTextBoxColumn.Name = "thanhTienDataGridViewTextBoxColumn";
-            this.thanhTienDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // trangThaiDataGridViewTextBoxColumn
-            // 
-            this.trangThaiDataGridViewTextBoxColumn.DataPropertyName = "TrangThai";
-            resources.ApplyResources(this.trangThaiDataGridViewTextBoxColumn, "trangThaiDataGridViewTextBoxColumn");
-            this.trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
-            this.trangThaiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hoaDonDienBindingSource1
-            // 
-            this.hoaDonDienBindingSource1.DataMember = "HoaDonDien";
-            this.hoaDonDienBindingSource1.DataSource = this.hoaDonBindingSource;
-            // 
-            // hoaDonBindingSource
-            // 
-            this.hoaDonBindingSource.DataSource = this.hoaDon;
-            this.hoaDonBindingSource.Position = 0;
-            // 
-            // hoaDon
-            // 
-            this.hoaDon.DataSetName = "HoaDon";
-            this.hoaDon.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -619,16 +765,6 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // hoaDonNuocBindingSource
-            // 
-            this.hoaDonNuocBindingSource.DataMember = "HoaDonNuoc";
-            this.hoaDonNuocBindingSource.DataSource = this.hoaDonBindingSource;
-            // 
-            // hoaDonDienBindingSource
-            // 
-            this.hoaDonDienBindingSource.DataMember = "HoaDonDien";
-            this.hoaDonDienBindingSource.DataSource = this.hoaDonBindingSource;
-            // 
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
@@ -682,119 +818,34 @@
             // 
             this.thong_Tin_Chu_HoTableAdapter.ClearBeforeFill = true;
             // 
-            // hoaDonDienTableAdapter
-            // 
-            this.hoaDonDienTableAdapter.ClearBeforeFill = true;
-            // 
-            // hoaDonNuocTableAdapter
-            // 
-            this.hoaDonNuocTableAdapter.ClearBeforeFill = true;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
-            // comboBox5
+            // sVinhKVinhDataSet
             // 
-            resources.ApplyResources(this.comboBox5, "comboBox5");
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            resources.GetString("comboBox5.Items"),
-            resources.GetString("comboBox5.Items1"),
-            resources.GetString("comboBox5.Items2"),
-            resources.GetString("comboBox5.Items3"),
-            resources.GetString("comboBox5.Items4")});
-            this.comboBox5.Name = "comboBox5";
+            this.sVinhKVinhDataSet.DataSetName = "SVinhKVinhDataSet";
+            this.sVinhKVinhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label16
+            // hoaDonDienBindingSource
             // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            this.hoaDonDienBindingSource.DataMember = "HoaDonDien";
+            this.hoaDonDienBindingSource.DataSource = this.sVinhKVinhDataSet;
             // 
-            // label17
+            // hoaDonDienTableAdapter
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            this.hoaDonDienTableAdapter.ClearBeforeFill = true;
             // 
-            // label18
+            // hoaDonNuocBindingSource
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            this.hoaDonNuocBindingSource.DataMember = "HoaDonNuoc";
+            this.hoaDonNuocBindingSource.DataSource = this.sVinhKVinhDataSet;
             // 
-            // comboBox6
+            // hoaDonNuocTableAdapter
             // 
-            resources.ApplyResources(this.comboBox6, "comboBox6");
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            resources.GetString("comboBox6.Items"),
-            resources.GetString("comboBox6.Items1")});
-            this.comboBox6.Name = "comboBox6";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
-            // 
-            // comboBox7
-            // 
-            resources.ApplyResources(this.comboBox7, "comboBox7");
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            resources.GetString("comboBox7.Items"),
-            resources.GetString("comboBox7.Items1"),
-            resources.GetString("comboBox7.Items2"),
-            resources.GetString("comboBox7.Items3"),
-            resources.GetString("comboBox7.Items4"),
-            resources.GetString("comboBox7.Items5"),
-            resources.GetString("comboBox7.Items6"),
-            resources.GetString("comboBox7.Items7"),
-            resources.GetString("comboBox7.Items8"),
-            resources.GetString("comboBox7.Items9"),
-            resources.GetString("comboBox7.Items10"),
-            resources.GetString("comboBox7.Items11")});
-            this.comboBox7.Name = "comboBox7";
-            // 
-            // textBox9
-            // 
-            resources.ApplyResources(this.textBox9, "textBox9");
-            this.textBox9.Name = "textBox9";
-            // 
-            // textBox10
-            // 
-            resources.ApplyResources(this.textBox10, "textBox10");
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
-            // 
-            // comboBox8
-            // 
-            resources.ApplyResources(this.comboBox8, "comboBox8");
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            resources.GetString("comboBox8.Items"),
-            resources.GetString("comboBox8.Items1"),
-            resources.GetString("comboBox8.Items2")});
-            this.comboBox8.Name = "comboBox8";
-            // 
-            // comboBox9
-            // 
-            resources.ApplyResources(this.comboBox9, "comboBox9");
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            resources.GetString("comboBox9.Items"),
-            resources.GetString("comboBox9.Items1")});
-            this.comboBox9.Name = "comboBox9";
+            this.hoaDonNuocTableAdapter.ClearBeforeFill = true;
             // 
             // ManHinhChinh
             // 
@@ -820,16 +871,14 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonDienBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDon)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonNuocBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoaDonDienBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sVinhKVinhDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonDienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonNuocBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -862,7 +911,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView2;
-      //  private SVinhKVinhDataSet1TableAdapters.HoaDonNuocTableAdapter hoaDonNuocTableAdapter;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem adminstatorToolStripMenuItem;
@@ -874,13 +922,8 @@
         private ThongTinChuHo thongTinChuHo;
         private System.Windows.Forms.BindingSource thongTinChuHoBindingSource;
         private ThongTinChuHoTableAdapters.Thong_Tin_Chu_HoTableAdapter thong_Tin_Chu_HoTableAdapter;
-        private System.Windows.Forms.BindingSource hoaDonBindingSource;
-        private HoaDon hoaDon;
-        private System.Windows.Forms.BindingSource hoaDonDienBindingSource;
-        private HoaDonTableAdapters.HoaDonDienTableAdapter hoaDonDienTableAdapter;
-        private System.Windows.Forms.BindingSource hoaDonNuocBindingSource;
-        private HoaDonTableAdapters.HoaDonNuocTableAdapter hoaDonNuocTableAdapter;
-        private System.Windows.Forms.Panel panel4;
+ 
+       private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
@@ -908,14 +951,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.BindingSource hoaDonDienBindingSource1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thangDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soDienSuDungDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thanhTienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trangThaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -929,5 +965,22 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private SVinhKVinhDataSet sVinhKVinhDataSet;
+        private System.Windows.Forms.BindingSource hoaDonDienBindingSource;
+        private SVinhKVinhDataSetTableAdapters.HoaDonDienTableAdapter hoaDonDienTableAdapter;
+        private System.Windows.Forms.BindingSource hoaDonNuocBindingSource;
+        private SVinhKVinhDataSetTableAdapters.HoaDonNuocTableAdapter hoaDonNuocTableAdapter;
     }
 }
