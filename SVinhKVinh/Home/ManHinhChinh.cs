@@ -283,8 +283,8 @@ namespace SVinhKVinh.Home
         {
             string SoPhong = comboBox5.SelectedItem.ToString();
             string LoaiDichVu = comboBox6.SelectedItem.ToString();
-            string Nam = comboBox8.Text;
-            string Thang = comboBox7.Text;
+            string Nam = comboBox8.SelectedItem.ToString();
+            string Thang = comboBox7.SelectedItem.ToString();
             string SoSuDung = textBox9.Text;           
             string trangthai = comboBox9.SelectedItem.ToString();
 
@@ -333,12 +333,20 @@ namespace SVinhKVinh.Home
                 cmd.Parameters.AddWithValue("@Tien", tien.ToString());
                 cmd.Parameters.AddWithValue("@TrangThai", trangthai);
                 cmd.ExecuteNonQuery();
-            }          
+            }
+            comboBox5.SelectedItem = null;
+            comboBox6.SelectedItem = null;
+            comboBox7.SelectedItem = null;
+            comboBox8.SelectedItem = null;
+            comboBox9.SelectedItem = null;
+            textBox9.Text = null;
+            textBox10.Text = null;s
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.ThemHoaDon();
+            
             this.button4_Click(sender, e);
         }
     }
