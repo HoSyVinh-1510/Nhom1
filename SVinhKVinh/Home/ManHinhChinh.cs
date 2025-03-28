@@ -173,6 +173,13 @@ namespace SVinhKVinh.Home
         private void button5_Click(object sender, EventArgs e)
         {
             this.ThemPhong();
+            textBox1.Text = null;
+            textBox2.Text = null;
+            textBox3.Text = null;
+            textBox4.Text = null;   
+            textBox5.Text = null;
+            textBox6.Text = null;
+            textBox7.Text = null;
         }
 
         private void ThemPhong()
@@ -263,12 +270,13 @@ namespace SVinhKVinh.Home
         {
             MessageBox.Show("Định dạng ngày dd//mm/yyyy");
         }
-
+        
         private void textBox7_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Định dạng ngày dd//mm/yyyy");
         }
 
+        //Hàm xóa phòng
         private void button6_Click(object sender, EventArgs e)
         {
             this.XoaPhong();
@@ -340,14 +348,47 @@ namespace SVinhKVinh.Home
             comboBox8.SelectedItem = null;
             comboBox9.SelectedItem = null;
             textBox9.Text = null;
-            textBox10.Text = null;s
+            textBox10.Text = null;
         }
 
+       // Hàm thêm hóa đơn
         private void button7_Click(object sender, EventArgs e)
         {
-            this.ThemHoaDon();
-            
+            this.ThemHoaDon();           
             this.button4_Click(sender, e);
+        }
+
+       // Hàm xóa hóa đơn
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.XoaHoaDon();
+            MessageBox.Show("Xóa hóa đơn thành công", "Hồ Sỹ Vinh notificate:");
+        }
+
+        private void XoaHoaDon()
+        {
+            string SoPhong = comboBox10.SelectedItem.ToString();
+            string LoaiDichVu = comboBox11.SelectedItem.ToString();
+            string Nam = comboBox13.SelectedItem.ToString();
+            string Thang = comboBox12.SelectedItem.ToString();
+            if (SoPhong == null || LoaiDichVu == null || Nam == null || Thang == null)
+            {
+                MessageBox.Show("Bạn phải chọn đủ thông tin để xóa hóa đơn", "Hồ Sỹ Vinh said that:");
+                return;
+            }
+            string strCon = @"Server=OHMYGOD\HOSYVINH1510;Database=SVinhKVinh;User Id=sa;Password=vinh1510";
+            using (SqlConnection conn=new SqlConnection(strCon))
+            {
+                conn.Open();
+                string query;
+                if (LoaiDichVu == "HÓA ĐƠN ĐIỆN") query = "DELETE FROM HoaDonDien WHERE SoPhong=@SoPhong AND Nam=@Nam AND Thang=@Thang";
+                else query = "DELETE FROM HoaDonNuoc WHERE SoPhong=@SoPhong AND Nam=@Nam AND Thang=@Thang";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@SoPhong", SoPhong);
+                cmd.Parameters.AddWithValue("@Nam", Nam);
+                cmd.Parameters.AddWithValue("@Thang", Thang);
+                cmd.ExecuteNonQuery();              
+            }          
         }
     }
 

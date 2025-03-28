@@ -491,6 +491,7 @@
             resources.ApplyResources(this.button8, "button8");
             this.button8.Name = "button8";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label27
             // 
@@ -854,6 +855,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "ManHinhChinh";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ManHinChinh_FormClosed);
             this.Load += new System.EventHandler(this.ManHinhChinh_Load);
