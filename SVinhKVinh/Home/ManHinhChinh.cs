@@ -349,6 +349,15 @@ namespace SVinhKVinh.Home
             comboBox9.SelectedItem = null;
             textBox9.Text = null;
             textBox10.Text = null;
+            return;
+
+        }
+
+        //Hàm sửa hóa đơn
+        private void SuaThongTinChuHo()
+        {
+            
+            return;
         }
 
        // Hàm thêm hóa đơn
@@ -388,8 +397,11 @@ namespace SVinhKVinh.Home
                 cmd.Parameters.AddWithValue("@Nam", Nam);
                 cmd.Parameters.AddWithValue("@Thang", Thang);
                 cmd.ExecuteNonQuery();              
-            }          
+            }   
+            return;
         }
+
+        
     }
 
    

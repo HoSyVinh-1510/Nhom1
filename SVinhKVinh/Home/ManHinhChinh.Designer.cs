@@ -120,6 +120,8 @@
             this.hoaDonDienTableAdapter = new SVinhKVinh.SVinhKVinhDataSetTableAdapters.HoaDonDienTableAdapter();
             this.hoaDonNuocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hoaDonNuocTableAdapter = new SVinhKVinh.SVinhKVinhDataSetTableAdapters.HoaDonNuocTableAdapter();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
             tabControl1 = new System.Windows.Forms.TabControl();
             tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -165,6 +167,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel4.Controls.Add(this.label28);
+            this.panel4.Controls.Add(this.comboBox14);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.comboBox4);
             this.panel4.Controls.Add(this.button6);
@@ -848,6 +852,25 @@
             // 
             this.hoaDonNuocTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox14
+            // 
+            resources.ApplyResources(this.comboBox14, "comboBox14");
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            resources.GetString("comboBox14.Items"),
+            resources.GetString("comboBox14.Items1"),
+            resources.GetString("comboBox14.Items2"),
+            resources.GetString("comboBox14.Items3"),
+            resources.GetString("comboBox14.Items4")});
+            this.comboBox14.Name = "comboBox14";
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.BackColor = System.Drawing.Color.Yellow;
+            this.label28.ForeColor = System.Drawing.Color.Red;
+            this.label28.Name = "label28";
+            // 
             // ManHinhChinh
             // 
             resources.ApplyResources(this, "$this");
@@ -984,5 +1007,7 @@
         private SVinhKVinhDataSetTableAdapters.HoaDonDienTableAdapter hoaDonDienTableAdapter;
         private System.Windows.Forms.BindingSource hoaDonNuocBindingSource;
         private SVinhKVinhDataSetTableAdapters.HoaDonNuocTableAdapter hoaDonNuocTableAdapter;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBox14;
     }
 }
